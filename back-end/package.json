@@ -1,0 +1,24 @@
+{
+  "name": "vootmini-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "https": "^1.0.0",
+    "m3u8-to-mp4": "^1.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}
