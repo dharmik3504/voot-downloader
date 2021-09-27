@@ -1,5 +1,6 @@
 
 
+
 # VootDownloder
 
 The **voot-downloader** is an project by which the user can download particular shows all the episode in just 2 click . I have made this project using
@@ -16,9 +17,21 @@ After downloading the project open the **front-end folder in [visual studio code
 
 > **ng-serve**
 
-The project will be loaded in this  [Address](http://localhost:4200/) 
+The project will be loaded in this  [Address](http://localhost:4200/)
 
-> **Note: Make sure [Node js](https://nodejs.org/en/) and [Angular](https://angular.io/guide/setup-local) is install in your system**
+# Key Features
+You can specify the range of episode  you want to download like
+if the total number of episode is 25 then
+
+       Enter the Range of Episode : 1-5,7-10,15-*
+
+The following pattern will ensure that it will download only from this range of episode here  (* asterisk) means all the episode from that show 
+
+# Note:
+
+ 1. > **Make sure [Node js](https://nodejs.org/en/)  and [Angular](https://angular.io/guide/setup-local) is install in your system**
+ 
+ 2. >**Make sure that the back-end and front-end  code is running without any error simultaneously.**
 
 # Limitation
 
