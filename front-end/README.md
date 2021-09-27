@@ -16,6 +16,8 @@ After downloading the project open the **front-end folder in [visual studio code
 
 > **ng-serve**
 
+The project will be loaded in this  [Address](http://localhost:4200/) 
+
 > **Note: Make sure [Node js](https://nodejs.org/en/) and [Angular](https://angular.io/guide/setup-local) is install in your system**
 
 # Limitation
