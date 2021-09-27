@@ -1,4 +1,5 @@
-#VootDownloder
+
+# VootDownloder
 
 The **voot-downloader** is an project by which the user can download particular shows all the episode in just 2 click . I have made this project using
 angular and express js.
@@ -11,3 +12,6 @@ There are 2 folder which you will find in the repositories which is **front-end*
 # Limitation
 
  - [ ] **The user are not able to download the voot select/premium show/episode**
+ 
+# Credits
+I'd like to thank Voot for their amazing content, and I didn't create this in the idea of piracy, but instead, wanted to showcase how easy it is to download a video from the website.
