@@ -1,0 +1,98 @@
+<!-- getAllVideQualityObj -->
+
+<div class="container">
+  <form [formGroup]="form"  #heroForm="ngForm" disabled=true>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="form-group">
+          <label for="vootShowURL">Enter the Voot Show URL</label>
+          <input type="Text" class="form-control" id="vootShowURL"  formControlName="website" placeholder="Enter the Voot Show URL">
+          <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+            <div>Name is required.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+
+
+
+        <div class="form-group">
+          <label for="website">Seasons :</label>
+          {{StoreNoOfSeasonArray.length==0}}
+          <select (change)="changeWebsite($event)" formControlName="seasonName" class="form-control">
+            <option disabled>Select Website</option>
+            <option>Choose Website</option>
+            <option *ngFor="let web of StoreNoOfSeasonArray" [ngValue]="web">{{web.season}}</option>
+          </select>
+          
+          <div *ngIf="f.seasonName.touched && f.seasonName.invalid" class="alert alert-danger">
+            <div>Name is required.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label for="quality">Quality</label>
+              <select formControlName="quality" class="form-control"  (change)="changeQuality($event)" >
+                <option disabled>Select Website</option>
+                <option>Choose Website</option>
+                <option *ngFor="let web of qualityArray" [ngValue]="web">{{web.name}}</option>
+              </select>
+              <div *ngIf="f.quality.touched && f.quality.invalid" class="alert alert-danger">
+                <div>Name is required.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group">
+              <label for="type">Download Type</label>
+              <select formControlName="type" class="form-control" (change)="changeType($event)" >
+                <option disabled>Select Website</option>
+                <option>Choose Website</option>
+                <option *ngFor="let web of typeArray" [ngValue]="web">{{web.name}}</option>
+              </select>
+              <div *ngIf="f.type.touched && f.type.invalid" class="alert alert-danger">
+                <div>Name is required.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <label for="vootShowRange">Enter the Range of Episode</label>
+          <input type="Text" class="form-control" id="vootShowRange"  formControlName="Range" placeholder="Enter the Range of Episode">
+          <div *ngIf="f.Range.touched && f.Range.invalid" class="alert alert-danger">
+            <div>Name is required.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    
+    <div style="margin: 21px auto 22px 21em;">
+  
+      <button class="btn btn-primary" (click)="submit1()" type="submit" [disabled]="!form.valid">Submit</button>
+      <button class="btn btn-primary" (click)="getAllVideQualityObj()">Download All Video</button>
+      <button class="btn btn-primary" (click)="resetAll()">Reset All</button>
+
+    </div>
+  </form>
+
+  <div class="row">
+    <label>Total No Episode: {{getAllVideQualityArray.length}}</label>
+    <div class="col-lg-4 borderColour" *ngFor="let person of getAllVideQualityArray;">
+      {{person.tempEpisodeTitle}}
+    </div>
+  </div>
+ </div>
+
+ <app-spinner></app-spinner>
+
